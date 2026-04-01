@@ -972,11 +972,11 @@
     },
     {
       "key": "apiKey",
-      "value": "c5136cc52e4d3e17fcdf13dbb39640e2"
+      "value": "APIKEY"
     },
     {
       "key": "apiToken",
-      "value": "ATTAffddb69af46737a1e3a2a0069e03b54ecfe5e537b48052473b6c93f30b1285e24F3D9CAA"
+      "value": "APITOKEN
     },
     {
       "key": "lastDoneListId",
