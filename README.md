@@ -1,119 +1,95 @@
-🧪 Trello API Testing Project (Postman)
-📌 Overview
+# 🧪 Trello API Testing Project
 
+## 📌 Overview
 This project demonstrates API testing using Trello REST API in Postman.
 
-It includes:
+The goal of this project was to simulate real-life API testing scenarios, including working with dynamic data, validating responses, and creating a complete workflow.
 
-CRUD operations
-Dynamic variables (collection & environment)
-Automated test scripts
-Request chaining between endpoints
-⚙️ Environment & Variables
+---
 
-The project uses Postman variables to manage dynamic data:
+## 🚀 What I Tested
 
-🔹 Environment Variables
-base_url
-api_key
-token
-🔹 Collection Variables
-lastBoardId
-boardsIds
-lastListId
-lastDoneListId
-🔄 Workflow Logic
-Get all boards → extract all board IDs
-Select a board dynamically
-Create lists inside selected board
-Create card
-Move card between lists
-Delete board
-🧪 Test Scripts & Validation
-✅ Get All Boards
-const response = pm.response.json();
+### 🧩 Board Management
+- Created new boards
+- Retrieved all existing boards
+- Deleted boards
+- Verified behavior after deletion
 
-pm.test("Status code 200", function() {
-    pm.response.to.have.status(200);
-});
+### 📋 List Management
+- Created TODO and DONE lists
+- Verified lists are assigned to the correct board
 
-// Verify new board exists
-pm.test("New Board is found", function() {
-    const newBoardFound = response.find(item => item.id === pm.collectionVariables.get("lastBoardId"));
-    pm.expect(newBoardFound).to.be.an("object");
-});
+### 🃏 Card Management
+- Created cards
+- Moved cards between lists (TODO → DONE)
 
-// Extract data
-const totalBoards = response.length;
+---
 
-const boardsIds = [];
-const boardsNames = [];
+## ⚙️ How the Logic Works
 
-for (let i = 0; i < response.length; i++) {
-    boardsIds.push(response[i].id);
-    boardsNames.push(response[i].name);
-}
+The project uses dynamic variables and request chaining:
 
-pm.collectionVariables.set("boardsIds", boardsIds);
-✅ Create DONE List
-const response = pm.response.json();
+- Extract data from responses (e.g. board IDs)
+- Store them in collection variables
+- Reuse them in the next requests
 
-pm.test("Status code is 200", function () {
-    pm.response.to.have.status(200);
-});
+Example flow:
+1. Get all boards
+2. Extract board IDs
+3. Select a board dynamically
+4. Create lists inside that board
+5. Perform actions on cards
+6. Delete the board
 
-pm.test("List assigned to the correct board", function() {
-    pm.expect(response.idBoard).to.eql(pm.collectionVariables.get("lastBoardId"));
-});
+---
 
-pm.test("List name is correct", function() {
-    pm.expect(response.name).to.eql("DONE");
-});
+## 🧪 Testing Approach
 
-pm.test("List is not closed", function() {
-    pm.expect(response.closed).to.eql(false);
-});
+I implemented automated tests in Postman to validate:
 
-// Save IDs
-pm.collectionVariables.set("lastDoneListId", response.id);
-pm.collectionVariables.set("lastListId", response.id);
-✅ Delete Board (Dynamic Selection)
-const boardsIds = pm.collectionVariables.get("boardsIds");
+- Status codes (e.g. 200 OK)
+- Response structure and data
+- Correct assignment of lists and cards
 
-let boardId;
+---
 
-if (boardsIds.length === 1)
-    boardId = boardsIds;
-else
-    boardId = boardsIds.pop();
+## 🔄 Dynamic Data Handling
 
-// Set selected board
-if (boardId !== undefined)
-    pm.collectionVariables.set("lastBoardId", boardId);
+This project includes:
 
-// Update remaining boards
-pm.collectionVariables.set("boardsIds", boardsIds);
-🧠 Key Testing Concepts Demonstrated
-✔️ API chaining (dynamic IDs between requests)
-✔️ Collection variables usage
-✔️ Data extraction from responses
-✔️ Response validation (status + body)
-✔️ Dynamic test logic (array handling)
-✔️ Basic data processing (loops, arrays)
-⚠️ Edge Case Handling
-Dynamic board selection from multiple boards
-Handling last remaining board
-Preventing undefined variables
-▶️ How to Run
-Import Postman Collection
-Import Environment file
-Add your Trello API credentials
-Run collection using Collection Runner
-📈 Future Improvements
-Add negative test cases
-Add Newman CLI execution
-Integrate with GitHub Actions (CI/CD)
-Extend validation coverage
-👨‍💻 Author
+- Collection variables (board ID, list ID, etc.)
+- Dynamic selection of resources
+- Handling multiple boards using arrays
+- Updating variables between requests
 
+---
+
+## 🧠 What I Learned
+
+- How to work with REST APIs in a real scenario
+- Writing test scripts in Postman using JavaScript
+- Handling dynamic data between requests
+- Validating API responses
+- Structuring an API testing project
+
+---
+
+## ▶️ How to Run
+
+1. Import the Postman Collection
+2. Import the Environment file
+3. Add your Trello API key and token
+4. Run the collection using Postman Runner
+
+---
+
+## 📈 Future Improvements
+
+- Add negative test scenarios
+- Run tests using Newman (CLI)
+- Integrate with CI/CD (GitHub Actions)
+
+---
+
+## 👨‍💻 Author
 QA Engineer (API Testing)
