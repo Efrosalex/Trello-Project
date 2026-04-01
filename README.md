@@ -1,95 +1,67 @@
-# 🧪 Trello API Testing Project
+Trello API Testing Project
+Overview
 
-## 📌 Overview
-This project demonstrates API testing using Trello REST API in Postman.
+This project shows how I tested the Trello API using Postman.
 
-The goal of this project was to simulate real-life API testing scenarios, including working with dynamic data, validating responses, and creating a complete workflow.
+I created a simple workflow where I work with boards, lists, and cards, and I validate the responses using test scripts.
 
----
+What I Did
+Boards
+Create a new board
+Get all boards
+Delete a board
+Check the behavior after deletion
+Lists
+Create a TODO list
+Create a DONE list
+Check that the list is created on the correct board
+Cards
+Create a card
+Move a card from TODO to DONE
+How It Works
 
-## 🚀 What I Tested
+This project uses collection variables to pass data between requests.
 
-### 🧩 Board Management
-- Created new boards
-- Retrieved all existing boards
-- Deleted boards
-- Verified behavior after deletion
+For example:
 
-### 📋 List Management
-- Created TODO and DONE lists
-- Verified lists are assigned to the correct board
+I get all board IDs
+I store them in a variable
+I use one of them in the next requests
+Workflow
+Get all boards
+Save board IDs
+Choose a board
+Create lists
+Create and move cards
+Delete the board
+Testing
 
-### 🃏 Card Management
-- Created cards
-- Moved cards between lists (TODO → DONE)
+I added tests in Postman to check:
 
----
+Status code (200 OK)
+If the correct data is returned
+If lists and cards belong to the correct board
+Dynamic Data
 
-## ⚙️ How the Logic Works
+I used collection variables such as:
 
-The project uses dynamic variables and request chaining:
+lastBoardId
+boardsIds
+lastListId
 
-- Extract data from responses (e.g. board IDs)
-- Store them in collection variables
-- Reuse them in the next requests
+I also worked with arrays to handle multiple boards and updated variables after each request.
 
-Example flow:
-1. Get all boards
-2. Extract board IDs
-3. Select a board dynamically
-4. Create lists inside that board
-5. Perform actions on cards
-6. Delete the board
+Notes
+API keys are not included
+Placeholder values are used (example: INVALID_KEY)
+How to Run
+Import the Postman collection
+Add your Trello API key and token
+Run the collection
+Future Improvements
+Add more negative tests
+Use environment variables
+Run tests using Newman
+Author
 
----
-
-## 🧪 Testing Approach
-
-I implemented automated tests in Postman to validate:
-
-- Status codes (e.g. 200 OK)
-- Response structure and data
-- Correct assignment of lists and cards
-
----
-
-## 🔄 Dynamic Data Handling
-
-This project includes:
-
-- Collection variables (board ID, list ID, etc.)
-- Dynamic selection of resources
-- Handling multiple boards using arrays
-- Updating variables between requests
-
----
-
-## 🧠 What I Learned
-
-- How to work with REST APIs in a real scenario
-- Writing test scripts in Postman using JavaScript
-- Handling dynamic data between requests
-- Validating API responses
-- Structuring an API testing project
-
----
-
-## ▶️ How to Run
-
-1. Import the Postman Collection
-2. Import the Environment file
-3. Add your Trello API key and token
-4. Run the collection using Postman Runner
-
----
-
-## 📈 Future Improvements
-
-- Add negative test scenarios
-- Run tests using Newman (CLI)
-- Integrate with CI/CD (GitHub Actions)
-
----
-
-## 👨‍💻 Author
 QA Engineer (API Testing)
