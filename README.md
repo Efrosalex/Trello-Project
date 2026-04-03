@@ -8,9 +8,9 @@ I created a simple workflow where I work with boards, lists, and cards, and I va
 
 ---
 
-## 🚀 Project Coverage
+# 🚀 Project Coverage
 
-### 🧩 Boards
+## 🧩 Boards
 - 🟢 Create a new board  
 - ✏️ Update board  
 - 🔍 Get board  
@@ -19,32 +19,32 @@ I created a simple workflow where I work with boards, lists, and cards, and I va
 
 ---
 
-### 📋 Lists
+## 📋 Lists
 - 🟢 Create list
 - 🔄 Update list
 - ❌ Delete list  
 
 ---
 
-### 🃏 Cards
+## 🃏 Cards
 - 🟢 Create card  
 - 🔄 Move card (TODO → DONE)  
 - ❌ Delete card  
 
 ---
 
-### ❌ Invalid Requests
+## ❌ Invalid Requests
 
-#### 🧩 Board
+### 🧩 Board
 - ❌ Create board with missing required fields  
 - ❌ Get non-existent board  
 - ❌ Delete already deleted board  
 
-#### 📋 List
+### 📋 List
 - ❌ Create list with invalid data  
 - ❌ Delete non-existent list  
 
-#### 🃏 Card
+### 🃏 Card
 - ❌ Create card with missing data  
 - ❌ Move card to invalid list  
 - ❌ Delete non-existent card  
@@ -52,7 +52,7 @@ I created a simple workflow where I work with boards, lists, and cards, and I va
 ---
 
 
-## ⚙️ How it works
+# ⚙️ How it works
 
 This project uses collection variables to pass data between requests.
 
@@ -62,9 +62,9 @@ For example:
 * I store them in a variable
 * I use one of them in the next requests
 
-## 🔄 Project Structure and Workflow
+# 🔄 Project Structure and Workflow
 
-### 📌 Main Functional Workflow
+## 📌 Main Functional Workflow
 
 1️⃣ Create new board  
 2️⃣ Update board  
@@ -96,11 +96,11 @@ For example:
 </small>
 
 
-### 🛠️ Maintenance
+## 🛠️ Maintenance
 
 1️⃣ Get all boards  
 
-### ❌ Invalid Cases
+## ❌ Invalid Cases
 
 1️⃣ Create new board with invalid token  
 2️⃣ Create new board with invalid API endpoint  
@@ -110,7 +110,7 @@ For example:
 
 ---
 
-## 🧪 Testing
+# 🧪 Testing
 
 I added tests in Postman to check:
 
@@ -120,7 +120,7 @@ I added tests in Postman to check:
 
 ---
 
-## 🔄 Dynamic Data
+# 🔄 Dynamic Data
 
 I used collection variables such as:
 
@@ -132,14 +132,14 @@ I also worked with arrays to handle multiple boards and updated variables after 
 
 ---
 
-## ⚠️ Notes
+# ⚠️ Notes
 
 * API keys are not included
 * Placeholder values are used (example: `INVALID_KEY`)
 
 ---
 
-## ▶️ How to run
+# ▶️ How to run
 
 1. Import the Postman collection
 2. Add your Trello API key and token
@@ -147,7 +147,7 @@ I also worked with arrays to handle multiple boards and updated variables after 
 
 ---
 
-## 📈 Future Improvements
+# 📈 Future Improvements
 
 * Add more negative tests
 * Use environment variables
@@ -155,6 +155,6 @@ I also worked with arrays to handle multiple boards and updated variables after 
 
 ---
 
-## 👨‍💻 Author
+# 👨‍💻 Author
 
 QA Engineer (API Testing)
