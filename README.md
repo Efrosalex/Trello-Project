@@ -86,7 +86,7 @@ For example:
 
 1️⃣4️⃣ Delete board  
 1️⃣5️⃣ Get deleted board  
-
+---
 <small>
 ⚠️ Important Dependency Note<br><br>
 
@@ -94,7 +94,7 @@ For example:
 - Cards must exist within a list<br>
 - Deleting a board removes all associated lists and cards<br>
 </small>
-
+---
 
 ### 🛠️ Maintenance
 
