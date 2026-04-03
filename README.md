@@ -88,7 +88,7 @@ For example:
 1️⃣5️⃣ Get deleted board  
 
 <small>
-### ⚠️ Important Dependency Note<br><br>
+⚠️ Important Dependency Note<br><br>
 
 - Lists must be created under an existing board<br>
 - Cards must exist within a list<br>
