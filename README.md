@@ -66,28 +66,35 @@ For example:
 
 ### 📌 Main Functional Workflow
 
-End-to-end flow of the application:
+1️⃣ Create new board  
+2️⃣ Update board  
+3️⃣ Get board  
 
-1️⃣ - Create new board  
-2️⃣ - Update board  
-3️⃣ - Get board  
+  ↳ 4️⃣ Create TODO list  
+  ↳ 5️⃣ Create DONE list  
+  ↳ 6️⃣ Update list  
+  ↳ 7️⃣ Get lists  
 
-4️⃣ --- Create TODO list  
-5️⃣ --- Create DONE list  
-6️⃣ --- Update list  
-7️⃣ --- Get lists  
+    ↳ 8️⃣ Create new card  
+    ↳ 9️⃣ Move card (TODO → DONE)  
 
-8️⃣ ----- Create new card  
-9️⃣ ----- Move card (TODO → DONE)  
+      ↳ 🔟 Delete card  
+      ↳ 1️⃣1️⃣ Get deleted card  
 
-🔟 ----- Delete card  
-1️⃣1️⃣ ------ Get deleted card  
+  ↳ 1️⃣2️⃣ Delete list  
+  ↳ 1️⃣3️⃣ Get deleted list  
 
-1️⃣2️⃣ --- Delete list  
-1️⃣3️⃣ --- Get deleted list  
+1️⃣4️⃣ Delete board  
+1️⃣5️⃣ Get deleted board  
 
-1️⃣4️⃣ - Delete board  
-1️⃣5️⃣ - Get deleted board  
+---
+
+### ⚠️ Important Dependency Note
+
+- Lists must be created under an existing board  
+- Cards must exist within a list  
+- Deleting a board removes all associated lists and cards
+---
 
 ### Maintenance
 
