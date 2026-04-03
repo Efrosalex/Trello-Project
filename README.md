@@ -88,11 +88,11 @@ For example:
 1️⃣5️⃣ Get deleted board  
 
 ### ⚠️ Important Dependency Note
-<small>
-- Lists → depend on Board  
-- Cards → depend on List  
-- Deleting a Board → removes all Lists & Cards  
-</small>
+
+<small> * Lists → depend on Board  </small>
+<small> * Cards → depend on List  </small>
+<small> * Deleting a Board → removes all Lists & Cards  </small>
+
 
 ### 🛠️ Maintenance
 
