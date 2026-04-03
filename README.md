@@ -8,27 +8,49 @@ I created a simple workflow where I work with boards, lists, and cards, and I va
 
 ---
 
-## 🚀 What I did
+## 🚀 Project Coverage
 
 ### 🧩 Boards
-
-* Create a new board
-* Get all boards
-* Delete a board
-* Check the behavior after deletion
-
-### 📋 Lists
-
-* Create a TODO list
-* Create a DONE list
-* Check that the list is created on the correct board
-
-### 🃏 Cards
-
-* Create a card
-* Move a card from TODO to DONE
+- 🟢 Create a new board  
+- ✏️ Update board  
+- 🔍 Get board  
+- 🔍 Get all boards  
+- ❌ Delete board  
 
 ---
+
+### 📋 Lists
+- 🟢 Create TODO list  
+- 🟢 Create DONE list  
+- ❌ Delete list  
+
+---
+
+### 🃏 Cards
+- 🟢 Create card  
+- 🔄 Move card (TODO → DONE)  
+- ❌ Delete card  
+
+---
+
+### ❌ Invalid Requests
+
+#### 🧩 Board
+- ❌ Create board with missing required fields  
+- ❌ Get non-existent board  
+- ❌ Delete already deleted board  
+
+#### 📋 List
+- ❌ Create list with invalid data  
+- ❌ Delete non-existent list  
+
+#### 🃏 Card
+- ❌ Create card with missing data  
+- ❌ Move card to invalid list  
+- ❌ Delete non-existent card  
+
+---
+
 
 ## ⚙️ How it works
 
@@ -40,14 +62,33 @@ For example:
 * I store them in a variable
 * I use one of them in the next requests
 
-### 🔄 Workflow
+## 🔄 Project Structure and Workflow
 
-1. Get all boards
-2. Save board IDs
-3. Choose a board
-4. Create lists
-5. Create and move cards
-6. Delete the board
+### Main Functional Workflow
+
+Create new board
+Update Board
+Get Board
+
+Create DONE List
+Create TODO List
+Get Lists
+
+Create New Card
+Move Card from TODO to DONE
+
+Delete Card
+Get Deleted Card
+
+Delete List
+Get Deleted List
+
+Delete Board
+Get Deleted Board
+
+### Maintenance
+
+### Invalid Cases
 
 ---
 
