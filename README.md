@@ -1,4 +1,5 @@
 # 🧪 Trello API Testing Project
+![Postman](https://img.shields.io/badge/Postman-API%20Testing-orange?logo=postman)
 
 ## 📌 Overview
 
