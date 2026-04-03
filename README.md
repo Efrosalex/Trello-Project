@@ -87,13 +87,12 @@ For example:
 1️⃣4️⃣ Delete board  
 1️⃣5️⃣ Get deleted board  
 
----
-
 ### ⚠️ Important Dependency Note
-
-- Lists must be created under an existing board  
-- Cards must exist within a list  
-- Deleting a board removes all associated lists and cards
+<small>
+- Lists → depend on Board  
+- Cards → depend on List  
+- Deleting a Board → removes all Lists & Cards  
+</small>
 
 ### 🛠️ Maintenance
 
