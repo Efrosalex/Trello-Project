@@ -64,27 +64,30 @@ For example:
 
 ## 🔄 Project Structure and Workflow
 
-### Main Functional Workflow
+### 📌 Main Functional Workflow
 
-Create new board
-Update Board
-Get Board
+End-to-end flow of the application:
 
-Create DONE List
-Create TODO List
-Get Lists
+1️⃣ 🟢 Create new board  
+2️⃣ ✏️ Update board  
+3️⃣ 🔍 Get board  
 
-Create New Card
-Move Card from TODO to DONE
+4️⃣ 🟢 Create TODO list  
+5️⃣ 🟢 Create DONE list  
+6️⃣ ✏️ Update list  
+7️⃣ 🔍 Get lists  
 
-Delete Card
-Get Deleted Card
+8️⃣ 🟢 Create new card  
+9️⃣ 🔄 Move card (TODO → DONE)  
 
-Delete List
-Get Deleted List
+🔟 ❌ Delete card  
+1️⃣1️⃣ 🔍 Get deleted card  
 
-Delete Board
-Get Deleted Board
+1️⃣2️⃣ ❌ Delete list  
+1️⃣3️⃣ 🔍 Get deleted list  
+
+1️⃣4️⃣ ❌ Delete board  
+1️⃣5️⃣ 🔍 Get deleted board  
 
 ### Maintenance
 
