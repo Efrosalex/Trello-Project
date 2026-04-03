@@ -94,11 +94,18 @@ For example:
 - Lists must be created under an existing board  
 - Cards must exist within a list  
 - Deleting a board removes all associated lists and cards
----
 
-### Maintenance
+### 🛠️ Maintenance
 
-### Invalid Cases
+1️⃣ Get all boards  
+
+### ❌ Invalid Cases
+
+1️⃣ Create new board with invalid token  
+2️⃣ Create new board with invalid API endpoint  
+
+3️⃣ Create new list without providing a board ID  
+4️⃣ Create new card without providing a list ID  
 
 ---
 
