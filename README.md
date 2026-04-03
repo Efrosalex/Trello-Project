@@ -20,8 +20,8 @@ I created a simple workflow where I work with boards, lists, and cards, and I va
 ---
 
 ### 📋 Lists
-- 🟢 Create TODO list  
-- 🟢 Create DONE list  
+- 🟢 Create list
+- 🔄 Update list
 - ❌ Delete list  
 
 ---
