@@ -147,14 +147,7 @@ I also worked with arrays to handle multiple boards and updated variables after 
 
 ---
 
-# 📈 Future Improvements
-
-* Add more negative tests
-* Use environment variables
-* Run tests using Newman
-
----
-
-# 👨‍💻 Author
-
-QA Engineer (API Testing)
+## 🧑‍💻 Author  
+Alexandru Efros  
+QA Automation | Playwright | Jira | Postman
+* [LinkedIn](https://www.linkedin.com/in/alexandruefros/) | [GitHub](https://github.com/Efrosalex)
