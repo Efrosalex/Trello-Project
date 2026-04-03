@@ -2,9 +2,27 @@
 
 ## 📌 Overview
 
-This project shows how I tested the Trello API using Postman.
+This project contains automated API tests for Trello, created using Postman.
 
-I created a simple workflow where I work with boards, lists, and cards, and I validate the responses using test scripts.
+It simulates a complete workflow for managing boards, lists, and cards, including validation of responses using test scripts.
+
+---
+
+## 🚀 Features
+
+* CRUD operations for Trello Boards
+* Create and manage Lists (TODO / DONE)
+* Create and move Cards between lists
+* Automated test scripts (status code + response validation)
+* Use of collection variables for dynamic data
+* Chained requests (data passed between requests)
+
+---
+
+## 🛠️ Tech Stack
+
+* Postman (API testing)
+* JavaScript (Postman test scripts)
 
 ---
 
